@@ -1,0 +1,12 @@
+.searchContainer {
+  display: flex;
+  gap: 15px;
+  width: 580px;
+}
+
+@media (max-width: 576px) {
+  .searchContainer {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}

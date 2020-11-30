@@ -1,0 +1,67 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  &.show {
+    display: block;
+  }
+
+  .content {
+    animation-duration: 0.4s;
+    animation-name: animatetop;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--grayDarker);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15% auto;
+    position: relative;
+    width: 50%;
+  }
+
+  .header {
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+    color: var(--grayDarker);
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+
+  .body {
+    padding: 2rem;
+  }
+
+  .close {
+    color: var(--grayDarker);
+    font-size: 2.8rem;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

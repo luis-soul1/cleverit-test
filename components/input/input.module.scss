@@ -1,0 +1,44 @@
+.label {
+  color: var(--grayDarker);
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+.inputContainer {
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid var(--gray);
+  padding: 1rem 1rem 1rem 2rem;
+  transition: box-shadow, border 0.3s ease-in-out;
+  width: 100%;
+  background-color: var(--white);
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &:focus {
+    border: 1px solid var(--blueHover);
+    box-shadow: 0 0 0 2px var(--blueDarker);
+    outline: none;
+  }
+  svg {
+    fill: var(--grayDarker);
+    width: 15px;
+    height: 15px;
+  }
+  
+  .input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--grayDarker);
+  
+    &::placeholder {
+      opacity: 0.5;
+      font-size: 1.4rem;
+    }
+  }
+}
+
